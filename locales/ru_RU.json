@@ -1,10 +1,10 @@
 {
   "common": {
-    "cancel": "Cancel",
-    "confirm": "Confirm",
-    "close": "Closure",
-    "reload": "Refresh",
-    "choose": "Choose",
+    "cancel": "Отмена",
+    "confirm": "Подтвердить",
+    "close": "Закрыть",
+    "reload": "Обновить",
+    "choose": "Выбрать",
     "navigate": "Navigate",
     "inputPlaceholder": "please enter",
     "selectPlaceholder": "please choose"
