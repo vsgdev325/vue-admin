@@ -1,8 +1,8 @@
-/* 存放数据库实体表类型， 具体内容在 ./entities */
+/* Хранить тип таблицы сущностей базы данных, конкретный контент ./entities */
 declare namespace Entity {
 }
 
-/* 各类接口返回的数据类型， 具体内容在 ./api */
+/* Типы данных, возвращаемые различными интерфейсами, конкретный контент ./api */
 declare namespace Api {
 
 }
@@ -34,21 +34,21 @@ declare namespace Storage {
   }
 
   interface Local {
-    /* 存储用户信息 */
+    /* Хранить информацию пользователя */
     userInfo: Api.Login.Info
-    /* 存储访问token */
+    /* Доступ к хранению token */
     accessToken: string
-    /* 存储刷新token */
+    /* Обновление хранения token */
     refreshToken: string
-    /* 存储登录账号 */
+    /* Магазин учетной записи входа в систему */
     loginAccount: any
-    /* 存储当前语言 */
+    /* Хранить текущий язык */
     lang: App.lang
   }
 }
 
 declare namespace App {
-  type lang = 'zhCN' | 'enUS'
+  type lang = 'zhCN' | 'enUS' | 'ruRU'
 }
 
 interface DictMap {

@@ -9,17 +9,17 @@ const { VITE_DEFAULT_LANG } = import.meta.env
 
 export const i18n = createI18n({
   legacy: false,
-  locale: local.get('lang') || VITE_DEFAULT_LANG, // 默认显示语言
+  locale: local.get('lang') || VITE_DEFAULT_LANG, // Отображение языка по умолчанию
   fallbackLocale: VITE_DEFAULT_LANG,
   messages: {
     zhCN,
     enUS,
     ruRU,
   },
-  // 缺失国际化键警告
+  // Отсутствие международных ключей предупреждениеие международных ключей предупреждение
   // missingWarn: false,
 
-  // 缺失回退内容警告
+  // Недостаток предупреждения о содержании отказа
   fallbackWarn: false,
 })
 

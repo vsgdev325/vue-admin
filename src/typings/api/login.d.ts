@@ -2,15 +2,15 @@
 
 namespace Api {
   namespace Login {
-    /* 登录返回的用户字段, 该数据是根据用户表扩展而来, 部分字段可能需要覆盖，例如id */
+    /* Войдите в поле пользователя, которое основано на расширении id пользователя */
     interface Info extends Entity.User {
-      /** 用户id */
+      /** id пользователя */
       id: number
-      /** 用户角色类型 */
+      /** Пользовательский тип символов */
       role: Entity.RoleType
-      /** 访问toekn */
+      /** Посещать token */
       accessToken: string
-      /** 刷新toekn */
+      /** обновлять token */
       refreshToken: string
     }
   }

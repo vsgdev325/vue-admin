@@ -1,39 +1,39 @@
 /**
- *后台服务的环境类型
- * - dev: 后台开发环境
- * - test: 后台测试环境
- * - prod: 后台生产环境
+ *Тип среды фонового обслуживания
+ * - dev: Среда развития
+ * - test: Среда тестирования
+ * - prod: Производственная среда
  */
-type ServiceEnvType = 'dev' | 'test' | 'prod'
+type ServiceEnvType = 'development' | 'dev' | 'test' | 'prod'
 
 interface ImportMetaEnv {
-  /** 项目基本地址 */
+  /** Базовый адрес */
   readonly VITE_BASE_URL: string
-  /** 项目标题 */
+  /** Название проекта */
   readonly VITE_APP_NAME: string
-  /** 开启请求代理 */
+  /** Прокси */
   readonly VITE_HTTP_PROXY?: 'Y' | 'N'
-  /** 是否开启打包压缩 */
+  /** Включать упаковку и сжатие */
   readonly VITE_BUILD_COMPRESS?: 'Y' | 'N'
-  /** 压缩算法类型 */
+  /** Тип алгоритма сжатия */
   readonly VITE_COMPRESS_TYPE?:
     | 'gzip'
     | 'brotliCompress'
     | 'deflate'
     | 'deflateRaw'
-  /** 路由模式 */
+  /** Режим маршрутизации */
   readonly VITE_ROUTE_MODE?: 'hash' | 'web'
-  /** 路由加载模式 */
+  /** Режим загрузки маршрутизации */
   readonly VITE_ROUTE_LOAD_MODE: 'static' | 'dynamic'
-  /** 首次加载页面 */
+  /** Путь к домашней странице */
   readonly VITE_HOME_PATH: string
-  /** 版权信息 */
+  /** Информация об авторском праве */
   readonly VITE_COPYRIGHT_INFO: string
-  /** 是否自动刷新token */
+  /** Автоматически обновлять token */
   readonly VITE_AUTO_REFRESH_TOKEN: 'Y' | 'N'
-  /** 默认语言 */
+  /** Язык по умолчанию */
   readonly VITE_DEFAULT_LANG: App.lang
-  /** 后端服务的环境类型 */
+  /** Тип среды обратного сервиса */
   readonly MODE: ServiceEnvType
 }
 

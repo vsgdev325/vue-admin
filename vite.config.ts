@@ -6,7 +6,7 @@ import { serviceConfig } from './service.config'
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  // 根据当前工作目录中的 `mode` 加载 .env 文件
+  // В соответствии с текущим каталогом рабочей `mode` нагрузка .env документ
   const env = loadEnv(mode, __dirname, '') as ImportMetaEnv
   const envConfig = serviceConfig[mode as ServiceEnvType]
 
@@ -19,13 +19,14 @@ export default defineConfig(({ mode }) => {
       },
     },
     server: {
-      host: '0.0.0.0',
+      port: 9980,
+      host: '127.0.0.1',
       proxy:
         env.VITE_HTTP_PROXY === 'Y' ? createViteProxy(envConfig) : undefined,
     },
     build: {
       target: 'esnext',
-      reportCompressedSize: false, // 启用/禁用 gzip 压缩大小报告
+      reportCompressedSize: false, // Включить/отключить gzip Отчет о сжатии
     },
     optimizeDeps: {
       include: ['echarts', 'md-editor-v3', 'quill'],
