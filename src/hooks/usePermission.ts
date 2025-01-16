@@ -1,7 +1,7 @@
 import { useAuthStore } from '@/store'
 import { isArray, isString } from 'radash'
 
-/** 权限判断 */
+/** Разрешения суждения */
 export function usePermission() {
   const authStore = useAuthStore()
 

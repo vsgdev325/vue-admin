@@ -1,13 +1,13 @@
 /// <reference path="../global.d.ts"/>
 
-/* 角色数据库表字段 */
+/* Поле таблицы базы данных символов */
 namespace Entity {
   type RoleType = 'super' | 'admin' | 'user'
 
   interface Role {
-    /** 用户id */
+    /** id роли */
     id?: number
-    /** 用户名 */
+    /** имя роли */
     role?: RoleType
   }
 }

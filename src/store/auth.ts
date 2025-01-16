@@ -16,26 +16,26 @@ export const useAuthStore = defineStore('auth-store', {
     }
   },
   getters: {
-    /** 是否登录 */
+    /** Входить в систему */
     isLogin(state) {
       return Boolean(state.token)
     },
   },
   actions: {
-    /* 登录退出，重置用户信息等 */
+    /* Войдите в систему, чтобы выйти, сбросить информацию пользователя и т. Д. */
     async logout() {
       const route = unref(router.currentRoute)
-      // 清除本地缓存
+      // Очистить локальный кеш
       this.clearAuthStorage()
-      // 清空路由、菜单等数据
+      // Такие данные, как маршруты очистки, меню и другие данные
       const routeStore = useRouteStore()
       routeStore.resetRouteStore()
-      // 清空标签栏数据
+      // Очистить данные о барах метки
       const tabStore = useTabStore()
       tabStore.clearAllTabs()
-      // 重置当前存储库
+      // Сбросить текущий репозиторий
       this.$reset()
-      // 重定向到登录页
+      // Сбросить страницу входа в систему
       if (route.meta.requiresAuth) {
         router.push({
           name: 'login',
@@ -51,14 +51,14 @@ export const useAuthStore = defineStore('auth-store', {
       local.remove('userInfo')
     },
 
-    /* 用户登录 */
+    /* Пользовательский вход */
     async login(userName: string, password: string) {
       try {
         const { isSuccess, data } = await fetchLogin({ userName, password })
         if (!isSuccess)
           return
 
-        // 处理登录信息
+        // Информация о входе в систему процесса
         await this.handleLoginInfo(data)
       }
       catch (e) {
@@ -66,20 +66,20 @@ export const useAuthStore = defineStore('auth-store', {
       }
     },
 
-    /* 处理登录返回的数据 */
+    /* Данные процесса, возвращаемые входом в систему */
     async handleLoginInfo(data: Api.Login.Info) {
-      // 将token和userInfo保存下来
+      // Сохраните token и userInfo
       local.set('userInfo', data)
       local.set('accessToken', data.accessToken)
       local.set('refreshToken', data.refreshToken)
       this.token = data.accessToken
       this.userInfo = data
 
-      // 添加路由和菜单
+      // Добавить маршрут и меню
       const routeStore = useRouteStore()
       await routeStore.initAuthRoute()
 
-      // 进行重定向跳转
+      // Поверните перенаправление
       const route = unref(router.currentRoute)
       const query = route.query as { redirect: string }
       router.push({

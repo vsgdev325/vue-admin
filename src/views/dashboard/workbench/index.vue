@@ -34,7 +34,7 @@ const { userInfo } = useAuthStore()
                     </n-el>
                   </template>
                   <template #header>
-                    <n-statistic label="活跃用户">
+                    <n-statistic :label="$t('workbench.statisticLabel1')">
                       <n-number-animation show-separator :from="0" :to="12039" />
                     </n-statistic>
                   </template>

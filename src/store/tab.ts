@@ -19,15 +19,15 @@ export const useTabStore = defineStore('tab-store', {
   },
   actions: {
     addTab(route: RouteLocationNormalized) {
-      // 根据meta确定是否不添加，可用于错误页,登录页等
+      // Определите, не добавляется ли он в соответствии с meta, его можно использовать для страницы ошибки, страницы входа в систему и т. Д.
       if (route.meta.withoutTab)
         return
 
-      // 如果标签名称已存在则不添加
+      // Если имя тега уже существует, оно не будет добавлено
       if (this.hasExistTab(route.fullPath as string))
         return
 
-      // 根据meta.pinTab传递到不同的分组中
+      // в соответствии с meta.pinTab Передать в разные группы
       if (route.meta.pinTab)
         this.pinTabs.push(route)
       else
@@ -35,26 +35,26 @@ export const useTabStore = defineStore('tab-store', {
     },
     async closeTab(fullPath: string) {
       const tabsLength = this.tabs.length
-      // 如果动态标签大于一个,才会标签跳转
+      // Если динамическая метка превышает единицу, метка будет прыгать
       if (this.tabs.length > 1) {
-        // 获取关闭的标签索引
+        // Получите индекс метки закрытия
         const index = this.getTabIndex(fullPath)
         const isLast = index + 1 === tabsLength
-        // 如果是关闭的当前页面，路由跳转到原先标签的后一个标签
+        // Если это текущая страница, которая закрыта, перемещение маршрутизации на последнюю метку исходной метки
         if (this.currentTabPath === fullPath && !isLast) {
-          // 跳转到后一个标签
+          // Прыгать к последнему лейблу
           router.push(this.tabs[index + 1].fullPath)
         }
         else if (this.currentTabPath === fullPath && isLast) {
-          // 已经是最后一个了，就跳转前一个
+          // Это последний, просто прыгай с первого
           router.push(this.tabs[index - 1].fullPath)
         }
       }
-      // 删除标签
+      // Удалить этикетку
       this.tabs = this.tabs.filter((item) => {
         return item.fullPath !== fullPath
       })
-      // 删除后如果清空了，就跳转到默认首页
+      // Если он очищен после удаления, перейдите на домашнюю страницу по умолчанию
       if (tabsLength - 1 === 0)
         router.push('/')
     },
@@ -86,7 +86,7 @@ export const useTabStore = defineStore('tab-store', {
         return item.fullPath === fullPath
       })
     },
-    /* 设置当前激活的标签 */
+    /* Установите в настоящее время активированный этикет */
     setCurrentTab(fullPath: string) {
       this.currentTabPath = fullPath
     },

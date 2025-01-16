@@ -1,24 +1,24 @@
 import { request } from '../http'
 
-// 获取所有路由信息
+// Получите всю информацию о маршруте
 export function fetchAllRoutes() {
   return request.Get<Service.ResponseResult<AppRoute.RowRoute[]>>('/getUserRoutes')
 }
 
-// 获取所有用户信息
+// Получите всю пользовательскую информацию
 export function fetchUserPage() {
   return request.Get<Service.ResponseResult<Entity.User[]>>('/userPage')
 }
-// 获取所有角色列表
+// Получение всего углового списка
 export function fetchRoleList() {
   return request.Get<Service.ResponseResult<Entity.Role[]>>('/role/list')
 }
 
 /**
- * 请求获取字典列表
+ * Запрос на получение списка словаря
  *
- * @param code - 字典编码，用于筛选特定的字典列表
- * @returns 返回的字典列表数据
+ * @param code - Словарь кодирование, используемое для проверки конкретного списка словаря
+ * @returns Данные списка словар
  */
 export function fetchDictList(code?: string) {
   const params = { code }

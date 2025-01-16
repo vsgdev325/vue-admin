@@ -8,6 +8,10 @@ const options = [
     value: 'enUS',
   },
   {
+    label: 'Русский',
+    value: 'ruRU',
+  },
+  {
     label: '中文',
     value: 'zhCN',
   },

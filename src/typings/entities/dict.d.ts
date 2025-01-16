@@ -1,6 +1,6 @@
 /// <reference path="../global.d.ts"/>
 
-/* 字典数据库表字段 */
+/* Поле таблицы базы данных словар */
 namespace Entity {
 
   interface Dict {

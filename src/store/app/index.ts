@@ -53,7 +53,7 @@ export const useAppStore = defineStore('app-store', {
     },
   },
   actions: {
-    // 重置所有设置
+    // Сбросить все настройки
     resetAlltheme() {
       this.theme = themeConfig
       this.primaryColor = '#18a058'
@@ -71,7 +71,7 @@ export const useAppStore = defineStore('app-store', {
       this.layoutMode = 'leftMenu'
       this.contentFullScreen = false
 
-      // 重置所有配色
+      // Сбросить все цветовые схемы
       this.setPrimaryColor(this.primaryColor)
     },
     setAppLang(lang: App.lang) {
@@ -79,7 +79,7 @@ export const useAppStore = defineStore('app-store', {
       local.set('lang', lang)
       this.lang = lang
     },
-    /* 设置主题色 */
+    /* Установите цвет темы */
     setPrimaryColor(color: string) {
       const brightenColor = colord(color).lighten(0.05).toHex()
       const darkenColor = colord(color).darken(0.05).toHex()
@@ -91,17 +91,17 @@ export const useAppStore = defineStore('app-store', {
     setColorMode(mode: 'light' | 'dark' | 'auto') {
       store.value = mode
     },
-    /* 切换侧边栏收缩 */
+    /* Переключить боковую панель, чтобы уменьшить */
     toggleCollapse() {
       this.collapsed = !this.collapsed
     },
-    /* 切换全屏 */
+    /* Переключить полный экран */
     toggleFullScreen() {
       toggle()
     },
     /**
-     * @description: 页面内容重载
-     * @param {number} delay - 延迟毫秒数
+     * @description: Контент страницы тяжелая нагрузка
+     * @param {number} delay - Задержка Millitrimum номер
      * @return {*}
      */
     async reloadPage(delay = 600) {
@@ -116,12 +116,12 @@ export const useAppStore = defineStore('app-store', {
         this.loadFlag = true
       }
     },
-    /* 切换色弱模式 */
+    /* Переключить цвет слабый режим */
     toggleColorWeak() {
       docEle.value.classList.toggle('color-weak')
       this.colorWeak = docEle.value.classList.contains('color-weak')
     },
-    /* 切换灰色模式 */
+    /* Переключить серый режим */
     toggleGrayMode() {
       docEle.value.classList.toggle('gray-mode')
       this.grayMode = docEle.value.classList.contains('gray-mode')

@@ -8,9 +8,9 @@ export const router = createRouter({
   history: VITE_ROUTE_MODE === 'hash' ? createWebHashHistory(VITE_BASE_URL) : createWebHistory(VITE_BASE_URL),
   routes,
 })
-// 安装vue路由
+// Установите Vue Route
 export async function installRouter(app: App) {
-  // 添加路由守卫
+  // Добавить маршрут
   setupRouterGuard(router)
   app.use(router)
   await router.isReady() // https://router.vuejs.org/zh/api/index.html#isready

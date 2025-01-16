@@ -1,6 +1,6 @@
 import 'uno.css'
 import '@/styles/index.css'
 
-// 全局引入的静态资源
+// Статические ресурсы ввели глобальные
 export function install() {
 }

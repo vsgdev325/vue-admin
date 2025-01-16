@@ -10,15 +10,15 @@ export function setupRouterGuard(router: Router) {
   const tabStore = useTabStore()
 
   router.beforeEach(async (to, from, next) => {
-    // 判断是否是外链，如果是直接打开网页并拦截跳转
+    // Определите, является ли это внешней ссылкой, если она напрямую открывается веб -страница и перехватывает прыжок
     if (to.meta.href) {
       window.open(to.meta.href)
       return false
     }
-    // 开始 loadingBar
+    // начинать loadingBar
     appStore.showProgress && window.$loadingBar?.start()
 
-    // 判断有无TOKEN,登录鉴权
+    // Судить, есть ли TOKEN, Авторизоваться
     const isLogin = Boolean(local.get('accessToken'))
     if (!isLogin) {
       if (to.name === 'login')
@@ -31,12 +31,12 @@ export function setupRouterGuard(router: Router) {
       return false
     }
 
-    // 判断路由有无进行初始化
+    // Определите, инициализируется ли маршрут
     if (!routeStore.isInitAuthRoute) {
       await routeStore.initAuthRoute()
-      // 动态路由加载完回到根路由
+      // Динамическая маршрутизация, загруженная обратно в корневой маршрут
       if (to.name === '404') {
-      // 等待权限路由加载好了，回到之前的路由,否则404
+      // В ожидании правильной маршрутизации вернитесь к предыдущему маршруту, в противном случае 404
         next({
           path: to.fullPath,
           replace: true,
@@ -47,7 +47,7 @@ export function setupRouterGuard(router: Router) {
       }
     }
 
-    // 判断当前页是否在login,则定位去首页
+    // Определить, является ли текущая страница login, Положение на домашней странице
     if (to.name === 'login') {
       next({ path: '/' })
       return false
@@ -56,18 +56,18 @@ export function setupRouterGuard(router: Router) {
     next()
   })
   router.beforeResolve((to) => {
-    // 设置菜单高亮
+    // Установите выделение меню
     routeStore.setActiveMenu(to.meta.activeMenu ?? to.fullPath)
-    // 添加tabs
+    // добавить в tabs
     tabStore.addTab(to)
-    // 设置高亮标签;
+    // Установите тег выделения;
     tabStore.setCurrentTab(to.fullPath as string)
   })
 
   router.afterEach((to) => {
-    // 修改网页标题
+    // Измените названия веб -страницы
     document.title = `${to.meta.title} - ${title}`
-    // 结束 loadingBar
+    // Заканчивать loadingBar
     appStore.showProgress && window.$loadingBar?.finish()
   })
 }

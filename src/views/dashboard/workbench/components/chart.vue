@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type ECOption, useEcharts } from '@/hooks'
-// 折线图
+// Складная диаграмма
 const lineOptions = ref<ECOption>({
   tooltip: {
     trigger: 'axis',

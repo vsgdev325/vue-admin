@@ -9,7 +9,7 @@ import {
 type ErrorStatus = keyof typeof ERROR_STATUS
 
 /**
- * @description: 处理请求成功，但返回后端服务器报错
+ * @description: Запрос на обработку успешна, но сервер обратной стороны возвращается, чтобы сообщить об ошибке
  * @param {Response} response
  * @return {*}
  */
@@ -31,8 +31,8 @@ export function handleResponseError(response: Response) {
 
 /**
  * @description:
- * @param {Record} data 接口返回的后台数据
- * @param {Service} config 后台字段配置
+ * @param {Record} data Фоновые данные, возвращаемые интерфейсом
+ * @param {Service} config Конфигурация фонового поля
  * @return {*}
  */
 export function handleBusinessError(data: Record<string, any>, config: Required<Service.BackendConfig>) {
@@ -50,7 +50,7 @@ export function handleBusinessError(data: Record<string, any>, config: Required<
 }
 
 /**
- * @description: 统一成功和失败返回类型
+ * @description: Единый успех и сбой типа возврата
  * @param {any} data
  * @param {boolean} isSuccess
  * @return {*} result
@@ -65,7 +65,7 @@ export function handleServiceResult(data: any, isSuccess: boolean = true) {
 }
 
 /**
- * @description: 处理接口token刷新
+ * @description: Процесс интерфейса обновление token
  * @return {*}
  */
 export async function handleRefreshToken() {
@@ -76,20 +76,20 @@ export async function handleRefreshToken() {
     return
   }
 
-  // 刷新token
+  // обновлять token
   const { data } = await fetchUpdateToken({ refreshToken: local.get('refreshToken') })
   if (data) {
     local.set('accessToken', data.accessToken)
     local.set('refreshToken', data.refreshToken)
   }
   else {
-    // 刷新失败，退出
+    // Обновление не удалось, выйти
     await authStore.logout()
   }
 }
 
 export function showError(error: Service.RequestError) {
-  // 如果error不需要提示,则跳过
+  // Если ошибка не должна запрашивать, пропустите
   const code = Number(error.code)
   if (ERROR_NO_TIP_STATUS.includes(code))
     return

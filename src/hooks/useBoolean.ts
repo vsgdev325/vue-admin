@@ -1,6 +1,6 @@
 /**
- * boolean组合式函数
- * @param initValue 初始值
+ * boolean Комбинированная функция
+ * @param initValue Начальное значение
  */
 export function useBoolean(initValue = false) {
   const bool = ref(initValue)

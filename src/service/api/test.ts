@@ -1,15 +1,15 @@
 import { blankInstance, request } from '../http'
 
-/* get方法测试 */
+/* get Метод тест */
 export function fetchGet(params?: any) {
   return request.Get('/getAPI', { params })
 }
 
-/* post方法测试 */
+/* post Метод тест */
 export function fetchPost(data: any) {
   return request.Post('/postAPI', data)
 }
-/* formPost方法测试 */
+/* formPost Метод тест */
 export function fetchFormPost(data: any) {
   const methodInstance = request.Post('/postFormAPI', data)
   methodInstance.meta = {
@@ -17,15 +17,15 @@ export function fetchFormPost(data: any) {
   }
   return methodInstance
 }
-/* delete方法测试 */
+/* delete Метод тест */
 export function fetchDelete() {
   return request.Delete('/deleteAPI')
 }
-/* put方法测试 */
+/* put Метод тест */
 export function fetchPut(data: any) {
   return request.Put('/putAPI', data)
 }
-/* 不携带token的接口 */
+/* Не носить token Интерфейсерфейс */
 export function withoutToken() {
   const methodInstance = request.Get('/getAPI')
   methodInstance.meta = {
@@ -33,7 +33,7 @@ export function withoutToken() {
   }
   return methodInstance
 }
-/* 接口数据转换 */
+/* Преобразование данных интерфейса */
 export function dictData() {
   return request.Get('/getDictData', {
     transform(rawData, _headers) {
@@ -49,43 +49,43 @@ export function dictData() {
     },
   })
 }
-/* 模拟获取二进制文件 */
+/* Simten, чтобы получить двоичные файлы */
 export function getBlob(url: string) {
   const methodInstance = blankInstance.Get<Blob>(url)
   methodInstance.meta = {
-    // 标识为blob数据
+    // Идентификация - это данные Blob
     isBlob: true,
   }
   return methodInstance
 }
 
-/* 带进度的下载文件 */
+/* Загрузить файл с прогрессом */
 export function downloadFile(url: string) {
   const methodInstance = blankInstance.Get<Blob>(url)
   methodInstance.meta = {
-    // 标识为blob数据
+    // Идентификация - это данные Blob
     isBlob: true,
   }
   return methodInstance
 }
-/* 测试状态码500失败 */
+/* Код состояния тестирования 500 не удалось */
 export function FailedRequest() {
   return request.Get('/serverError')
 }
 
-/* 测试业务码500失败 */
+/* Проверка бизнес -кода 500 не удалось */
 export function FailedResponse() {
   return request.Post('/businessError')
 }
-/* 测试业务码10000失败,无提示 */
+/* Тестовый бизнес -код не удается 10 000, без подсказок */
 export function FailedResponseWithoutTip() {
   return request.Post('/businessErrorWithoutTip')
 }
-/* token失效的接口 */
+/* token неудачный интерфейс */
 export function expiredTokenRequest() {
   return request.Get('/expiredToken')
 }
-/* 测试token刷新接口 */
+/* Проверьте интерфейс обновления токена */
 export function refreshToken() {
   return request.Get('/updataToken')
 }

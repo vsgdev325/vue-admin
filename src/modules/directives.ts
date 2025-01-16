@@ -1,7 +1,7 @@
 import type { App } from 'vue'
 
 export function install(app: App) {
-  /* 自动注册指令 */
+  /* Автоматическая регистрационная инструкция */
   Object.values(
     import.meta.glob<{ install: (app: App) => void }>('@/directives/*.ts', {
       eager: true,
