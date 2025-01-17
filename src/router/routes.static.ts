@@ -1,8 +1,10 @@
+import { $t } from '@/utils'
+
 export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'dashboard',
     path: '/dashboard',
-    title: '仪表盘',
+    title: $t('route.dashboard'),
     requiresAuth: true,
     icon: 'icon-park-outline:analysis',
     menuType: 'dir',
@@ -13,7 +15,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'workbench',
     path: '/dashboard/workbench',
-    title: '工作台',
+    title: $t('route.workbench'),
     requiresAuth: true,
     icon: 'icon-park-outline:alarm',
     pinTab: true,
@@ -25,7 +27,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'monitor',
     path: '/dashboard/monitor',
-    title: '监控页',
+    title: $t('route.monitor'),
     requiresAuth: true,
     icon: 'icon-park-outline:anchor',
     menuType: 'page',
@@ -36,7 +38,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'multi',
     path: '/multi',
-    title: '多级菜单演示',
+    title: $t('route.multi'),
     requiresAuth: true,
     icon: 'icon-park-outline:list',
     menuType: 'dir',
@@ -47,7 +49,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'multi2',
     path: '/multi/multi2',
-    title: '多级菜单子页',
+    title: $t('route.multi2'),
     requiresAuth: true,
     icon: 'icon-park-outline:list',
     menuType: 'page',
@@ -58,7 +60,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'multi2Detail',
     path: '/multi/multi2/detail',
-    title: '菜单详情页',
+    title: $t('route.multi2Detail'),
     requiresAuth: true,
     icon: 'icon-park-outline:list',
     hide: true,
@@ -71,7 +73,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'multi3',
     path: '/multi/multi3',
-    title: '多级菜单',
+    title: $t('route.multi3'),
     requiresAuth: true,
     icon: 'icon-park-outline:list',
     menuType: 'dir',
@@ -82,7 +84,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'multi4',
     path: '/multi/multi3/multi4',
-    title: '多级菜单3-1',
+    title: $t('route.multi4'),
     requiresAuth: true,
     icon: 'icon-park-outline:list',
     componentPath: '/demo/multi/multi3/multi4/index.vue',
@@ -92,7 +94,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'list',
     path: '/list',
-    title: '列表页',
+    title: $t('route.list'),
     requiresAuth: true,
     icon: 'icon-park-outline:list-two',
     menuType: 'dir',
@@ -103,7 +105,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'commonList',
     path: '/list/commonList',
-    title: '常用列表',
+    title: $t('route.commonList'),
     requiresAuth: true,
     icon: 'icon-park-outline:list-view',
     componentPath: '/demo/list/commonList/index.vue',
@@ -113,7 +115,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'cardList',
     path: '/list/cardList',
-    title: '卡片列表',
+    title: $t('route.cardList'),
     requiresAuth: true,
     icon: 'icon-park-outline:view-grid-list',
     componentPath: '/demo/list/cardList/index.vue',
@@ -123,7 +125,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'demo',
     path: '/demo',
-    title: '功能示例',
+    title: $t('route.demo'),
     requiresAuth: true,
     icon: 'icon-park-outline:application-one',
     menuType: 'dir',
@@ -134,7 +136,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'fetch',
     path: '/demo/fetch',
-    title: '请求示例',
+    title: $t('route.fetch'),
     requiresAuth: true,
     icon: 'icon-park-outline:international',
     componentPath: '/demo/fetch/index.vue',
@@ -154,7 +156,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'map',
     path: '/demo/map',
-    title: '地图',
+    title: $t('route.map'),
     requiresAuth: true,
     icon: 'carbon:map',
     keepAlive: true,
@@ -165,7 +167,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'editor',
     path: '/demo/editor',
-    title: '编辑器',
+    title: $t('route.editor'),
     requiresAuth: true,
     icon: 'icon-park-outline:editor',
     menuType: 'dir',
@@ -186,7 +188,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'editorRich',
     path: '/demo/editor/rich',
-    title: '富文本',
+    title: $t('route.editorRich'),
     requiresAuth: true,
     icon: 'icon-park-outline:edit-one',
     componentPath: '/demo/editor/rich/index.vue',
@@ -196,7 +198,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'clipboard',
     path: '/demo/clipboard',
-    title: '剪贴板',
+    title: $t('route.clipboard'),
     requiresAuth: true,
     icon: 'icon-park-outline:clipboard',
     componentPath: '/demo/clipboard/index.vue',
@@ -206,7 +208,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'icons',
     path: '/demo/icons',
-    title: '图标',
+    title: $t('route.icons'),
     requiresAuth: true,
     icon: 'local:cool',
     componentPath: '/demo/icons/index.vue',
@@ -216,7 +218,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'QRCode',
     path: '/demo/QRCode',
-    title: '二维码',
+    title: $t('route.QRCode'),
     requiresAuth: true,
     icon: 'icon-park-outline:two-dimensional-code',
     componentPath: '/demo/QRCode/index.vue',
@@ -226,7 +228,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'documents',
     path: '/documents',
-    title: '外链文档',
+    title: $t('route.documents'),
     requiresAuth: true,
     icon: 'icon-park-outline:file-doc',
     menuType: 'dir',
@@ -237,7 +239,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'documentsVue',
     path: '/documents/vue',
-    title: 'Vue',
+    title: $t('route.documentsVue'),
     requiresAuth: true,
     icon: 'logos:vue',
     componentPath: '/demo/documents/vue/index.vue',
@@ -247,7 +249,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'documentsVite',
     path: '/documents/vite',
-    title: 'Vite',
+    title: $t('route.documentsVite'),
     requiresAuth: true,
     icon: 'logos:vitejs',
     componentPath: '/demo/documents/vite/index.vue',
@@ -257,7 +259,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'documentsVueuse',
     path: '/documents/vueuse',
-    title: 'VueUse（外链）',
+    title: $t('route.documentsVueuse'),
     requiresAuth: true,
     icon: 'logos:vueuse',
     href: 'https://vueuse.org/guide/',
@@ -268,7 +270,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'permission',
     path: '/permission',
-    title: '权限',
+    title: $t('route.permission'),
     requiresAuth: true,
     icon: 'icon-park-outline:people-safe',
     menuType: 'dir',
@@ -279,7 +281,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'permissionDemo',
     path: '/permission/permission',
-    title: '权限示例',
+    title: $t('route.permissionDemo'),
     requiresAuth: true,
     icon: 'icon-park-outline:right-user',
     componentPath: '/demo/permission/permission/index.vue',
@@ -289,7 +291,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'justSuper',
     path: '/permission/justSuper',
-    title: 'super可见',
+    title: $t('route.justSuper'),
     requiresAuth: true,
     roles: [
       'super',
@@ -302,7 +304,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'error',
     path: '/error',
-    title: '异常页',
+    title: $t('route.error'),
     requiresAuth: true,
     icon: 'icon-park-outline:error-computer',
     menuType: 'dir',
@@ -313,7 +315,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'demo403',
     path: '/error/403',
-    title: '403',
+    title: $t('route.demo403'),
     requiresAuth: true,
     icon: 'carbon:error',
     order: 3,
@@ -324,7 +326,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'demo404',
     path: '/error/404',
-    title: '404',
+    title: $t('route.demo404'),
     requiresAuth: true,
     icon: 'icon-park-outline:error',
     order: 2,
@@ -335,7 +337,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'demo500',
     path: '/error/500',
-    title: '500',
+    title: $t('route.demo500'),
     requiresAuth: true,
     icon: 'carbon:data-error',
     order: 1,
@@ -346,7 +348,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'setting',
     path: '/setting',
-    title: '系统设置',
+    title: $t('route.setting'),
     requiresAuth: true,
     icon: 'icon-park-outline:setting',
     menuType: 'dir',
@@ -357,7 +359,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'accountSetting',
     path: '/setting/account',
-    title: '用户设置',
+    title: $t('route.accountSetting'),
     requiresAuth: true,
     icon: 'icon-park-outline:every-user',
     componentPath: '/setting/account/index.vue',
@@ -367,7 +369,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'dictionarySetting',
     path: '/setting/dictionary',
-    title: '字典设置',
+    title: $t('route.dictionarySetting'),
     requiresAuth: true,
     icon: 'icon-park-outline:book-one',
     componentPath: '/setting/dictionary/index.vue',
@@ -377,7 +379,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'menuSetting',
     path: '/setting/menu',
-    title: '菜单设置',
+    title: $t('route.menuSetting'),
     requiresAuth: true,
     icon: 'icon-park-outline:application-menu',
     componentPath: '/setting/menu/index.vue',
@@ -387,7 +389,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'userCenter',
     path: '/userCenter',
-    title: '个人中心',
+    title: $t('route.userCenter'),
     requiresAuth: true,
     icon: 'carbon:user-avatar-filled-alt',
     componentPath: '/demo/userCenter/index.vue',
@@ -397,7 +399,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'about',
     path: '/about',
-    title: '关于',
+    title: $t('route.about'),
     requiresAuth: true,
     icon: 'icon-park-outline:info',
     componentPath: '/demo/about/index.vue',
@@ -407,7 +409,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'cascader',
     path: '/demo/cascader',
-    title: '省市区联动',
+    title: $t('route.cascader'),
     requiresAuth: true,
     icon: 'icon-park-outline:add-subset',
     componentPath: '/demo/cascader/index.vue',
@@ -417,7 +419,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'documentsNova',
     path: '/documents/nova',
-    title: 'Nova docs',
+    title: $t('route.documentsNova'),
     requiresAuth: true,
     icon: 'local:logo',
     href: 'https://nova-admin-docs.netlify.app/',
@@ -428,7 +430,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'dict',
     path: '/demo/dict',
-    title: '字典示例',
+    title: $t('route.dict'),
     requiresAuth: true,
     icon: 'icon-park-outline:book-one',
     componentPath: '/demo/dict/index.vue',
@@ -438,7 +440,7 @@ export const staticRoutes: AppRoute.RowRoute[] = [
   {
     name: 'draggableList',
     path: '/list/draggableList',
-    title: '拖拽列表',
+    title: $t('route.draggableList'),
     requiresAuth: true,
     icon: 'icon-park-outline:menu-fold',
     componentPath: '/demo/list/draggableList/index.vue',

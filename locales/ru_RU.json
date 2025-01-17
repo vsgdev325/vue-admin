@@ -58,7 +58,15 @@
     "choose": "Выбрать",
     "close": "Закрыть",
     "confirm": "Подтвердить",
+    "dictData": {
+      "gender": {
+        "female": "Ж",
+        "male": "М"
+      },
+      "genderStatus": "Пол"
+    },
     "inputPlaceholder": "Пожалуйста, введите",
+    "more": "Ешё",
     "navigate": "Навигация",
     "reload": "Обновить",
     "selectPlaceholder": "Пожалуйста, выберите"
@@ -115,6 +123,33 @@
     "signUp": "Зарегистрироваться",
     "userAgreement": "Пользовательское соглашение"
   },
+  "monitor": {
+    "card": {
+      "downloads": "Загрузки",
+      "downloadsTotal": "Всего загрузок",
+      "registrations": "Регистраций",
+      "registrationsTotal": "Всего регистраций",
+      "tran": {
+        "tab": {
+          "endTime": "Время окончания",
+          "name": "Имя транзакции",
+          "progress": "Прогресс",
+          "startTime": "Время начала",
+          "status": "Статус"
+        }
+      },
+      "transactionRecords": "Записи транзакций",
+      "views": "Просмотров",
+      "viewsTotal": "Всего просмотров",
+      "visitSource": "Источники посещений",
+      "visits": "Визиты",
+      "visitsTotal": "Всего посещений"
+    },
+    "charts": {
+      "trafficTrends": "Тенденции трафика",
+      "visitTrends": "Тенденция посещений"
+    }
+  },
   "route": {
     "QRCode": "QR код",
     "about": "О программе",
@@ -159,6 +194,14 @@
     "setting": "Системные настройки",
     "userCenter": "Персональный центр",
     "workbench": "Инструментальные средства"
+  },
+  "router": {
+    "inner": {
+      "403": "У пользователя нет разрешения",
+      "404": "Страница не найдена",
+      "500": "Ошибка сервера",
+      "login": "Авторизоваться"
+    }
   },
   "workbench": {
     "statisticLabel1": "Активные пользователи"

@@ -58,7 +58,15 @@
     "choose": "选择",
     "close": "关闭",
     "confirm": "确认",
+    "dictData": {
+      "gender": {
+        "female": "女",
+        "male": "男"
+      },
+      "genderStatus": "状态是"
+    },
     "inputPlaceholder": "请输入",
+    "more": "更多",
     "navigate": "切换",
     "reload": "刷新",
     "selectPlaceholder": "请选择"
@@ -115,6 +123,33 @@
     "signUp": "注册",
     "userAgreement": "用户协议"
   },
+  "monitor": {
+    "card": {
+      "downloads": "下载量",
+      "downloadsTotal": "累计下载量",
+      "registrations": "注册量",
+      "registrationsTotal": "累计注册量",
+      "tran": {
+        "tab": {
+          "endTime": "结束时间",
+          "name": "交易名称",
+          "progress": "进度",
+          "startTime": "开始时间",
+          "status": "状态"
+        }
+      },
+      "transactionRecords": "成交记录",
+      "views": "浏览量",
+      "viewsTotal": "累计浏览量",
+      "visitSource": "访问来源",
+      "visits": "访问量",
+      "visitsTotal": "累计访问数"
+    },
+    "charts": {
+      "trafficTrends": "流量趋势",
+      "visitTrends": "访问量趋势"
+    }
+  },
   "route": {
     "QRCode": "二维码",
     "about": "关于",
@@ -159,6 +194,14 @@
     "setting": "系统设置",
     "userCenter": "个人中心",
     "workbench": "工作台"
+  },
+  "router": {
+    "inner": {
+      "403": "用户无权限",
+      "404": "找不到页面",
+      "500": "服务器错误",
+      "login": "登录"
+    }
   },
   "workbench": {
     "statisticLabel1": "活跃用户"

@@ -58,7 +58,15 @@
     "choose": "Choose",
     "close": "Closure",
     "confirm": "Confirm",
+    "dictData": {
+      "gender": {
+        "female": "F",
+        "male": "M"
+      },
+      "genderStatus": "Gender"
+    },
     "inputPlaceholder": "please enter",
+    "more": "More",
     "navigate": "Navigate",
     "reload": "Refresh",
     "selectPlaceholder": "please choose"
@@ -115,6 +123,33 @@
     "signUp": "Sign up",
     "userAgreement": "User Agreement"
   },
+  "monitor": {
+    "card": {
+      "downloads": "Downloads",
+      "downloadsTotal": "Downloads total",
+      "registrations": "Registrations",
+      "registrationsTotal": "Registrations total",
+      "tran": {
+        "tab": {
+          "endTime": "End time",
+          "name": "Transaction name",
+          "progress": "Progress",
+          "startTime": "Start time",
+          "status": "Status"
+        }
+      },
+      "transactionRecords": "Transaction records",
+      "views": "Views",
+      "viewsTotal": "Views total",
+      "visitSource": "Visit Source",
+      "visits": "Visits",
+      "visitsTotal": "Total visits"
+    },
+    "charts": {
+      "trafficTrends": "Traffic trends",
+      "visitTrends": "Visit Trends"
+    }
+  },
   "route": {
     "QRCode": "QR code",
     "about": "About",
@@ -159,6 +194,14 @@
     "setting": "System settings",
     "userCenter": "Personal Center",
     "workbench": "Workbench"
+  },
+  "router": {
+    "inner": {
+      "403": "User has no permission",
+      "404": "Page Not Found",
+      "500": "Server Error",
+      "login": "Log in"
+    }
   },
   "workbench": {
     "statisticLabel1": "Active users"

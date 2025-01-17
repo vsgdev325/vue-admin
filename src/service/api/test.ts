@@ -1,4 +1,5 @@
 import { blankInstance, request } from '../http'
+import { $t } from '@/utils'
 
 /* get Метод тест */
 export function fetchGet(params?: any) {
@@ -42,8 +43,8 @@ export function dictData() {
         ...response,
         data: {
           ...response.data,
-          gender: response.data.gender === 0 ? '男' : '女',
-          status: `状态是${response.data.status}`,
+          gender: response.data.gender === 0 ? $t('common.dictData.gender.male') : $t('common.dictData.gender.female'),
+          status: $t('common.dictData.genderStatus') && ` ${response.data.status}`,
         },
       }
     },
