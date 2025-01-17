@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  /** 异常类型 403 404 500 */
+  /** Тип исключения 403 404 500 */
   type: '403' | '404' | '500'
 }>()
 const router = useRouter()

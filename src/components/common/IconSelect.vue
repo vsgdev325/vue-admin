@@ -18,15 +18,15 @@ interface IconList {
 }
 const value = defineModel('value', { type: String })
 
-// 包含的图标库系列名
+// Название серии библиотеки значков
 const nameList = ['icon-park-outline', 'carbon']
 
-// 获取单个图标库数据
+// Получить данные библиотеки отдельных значков
 async function fetchIconList(name: string): Promise<IconList> {
   return await fetch(`https://api.iconify.design/collection?prefix=${name}`).then(res => res.json())
 }
 
-// 获取所有图标库数据
+// Получить все данные базы данных значков
 async function fetchIconAllList(nameList: string[]) {
   const namePromises = nameList.map(name => fetchIconList(name))
   const targets = await Promise.all(namePromises)
@@ -39,7 +39,7 @@ async function fetchIconAllList(nameList: string[]) {
     return i
   })
 }
-// 获取svg文件名
+// Получить имя файла SVG
 function getSvgName(path: string) {
   const regex = /\/([^/]+)\.svg$/
   const match = path.match(regex)
@@ -50,7 +50,7 @@ function getSvgName(path: string) {
   return path
 }
 
-// 获取所有本地图标
+// Получите все эти значки
 function generateLocalIconList() {
   const localSvgList = import.meta.glob('@/assets/svg-icons/*.svg', {
     query: '?raw',
@@ -71,29 +71,29 @@ onMounted(async () => {
   LocalIconList.value = generateLocalIconList()
 })
 
-// 当前tab
+// текущий tab
 const currentTab = shallowRef(0)
-// 当前tag
+// текущий tag
 const currentTag = shallowRef('')
 
-// 切换tab
+// Выключатель tab
 function handleChangeTab(index: number) {
   currentTab.value = index
   currentTag.value = ''
 }
-// 搜索图标输入框值
+// Значение значка поиска значение ввода ввода
 const searchValue = ref('')
 
-// 当前页数
+// Текущий номер страницы
 const currentPage = shallowRef(1)
 
-// 选择分类tag
+// Выберите классификацию tag
 function handleSelectIconTag(icon: string) {
   currentTag.value = currentTag.value === icon ? '' : icon
   currentPage.value = 1
 }
 
-// 包含当前分类或所有图标列表
+// Включая текущую классификацию или все списки значков
 const icons = computed(() => {
   const hasTag = !!currentTag.value
   if (hasTag)
@@ -102,7 +102,7 @@ const icons = computed(() => {
     return iconList.value[currentTab.value].icons
 })
 
-// 符合搜索条件的图标列表
+// Список значков, которые соответствуют условиям поиска
 const visibleIcons = computed(() => {
   return icons.value?.filter(i => i
     .includes(searchValue.value))?.slice((currentPage.value - 1) * 200, (currentPage.value) * 200)
@@ -110,13 +110,13 @@ const visibleIcons = computed(() => {
 
 const showModal = ref(false)
 
-// 选择图标
+// Выберите значок
 function handleSelectIcon(icon: string) {
   value.value = icon
   showModal.value = false
 }
 
-// 清除图标
+// Икона
 function clearIcon() {
   value.value = ''
   showModal.value = false

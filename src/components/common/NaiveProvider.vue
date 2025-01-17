@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useDialog, useLoadingBar, useMessage, useNotification } from 'naive-ui'
 
-// 挂载naive组件的方法至window, 以便在路由钩子函数和请求函数里面调用
+// Устанавливать naive Метод компонента window, Чтобы вызвать функцию и функцию запроса маршрутизации
 function registerNaiveTools() {
   window.$loadingBar = useLoadingBar()
   window.$dialog = useDialog()

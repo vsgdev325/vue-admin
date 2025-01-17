@@ -62,5 +62,6 @@
     "package.json": "pnpm-lock.yaml,pnpm-workspace.yaml,.gitattributes,.gitignore,.gitpod.yml,.npmrc,.browserslistrc,.node-version,.git*,.tazerc.json",
     "eslint.config.js": ".eslintignore,.prettierignore,.stylelintignore,.commitlintrc.*,.prettierrc.*,stylelint.config.*,.lintstagedrc.mjs,cspell.json",
     "docker-compose.product.yml": ".dockerignore,nginx.conf"
-  }
+  },
+  "i18nJsonEditor.translationService": "MicrosoftTranslator"
 }

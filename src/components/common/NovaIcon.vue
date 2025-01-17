@@ -2,13 +2,13 @@
 import { Icon } from '@iconify/vue'
 
 interface iconPorps {
-  /* 图标名称 */
+  /* Имя значка */
   icon?: string
-  /* 图标颜色 */
+  /* Цвет значков */
   color?: string
-  /* 图标大小 */
+  /* Размер значков */
   size?: number
-  /* 图标深度 */
+  /* Глубина иконы */
   depth?: 1 | 2 | 3 | 4 | 5
 }
 const { size = 18, icon } = defineProps<iconPorps>()

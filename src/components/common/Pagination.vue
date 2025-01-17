@@ -7,7 +7,7 @@ const {
 } = defineProps<Props>()
 
 const emit = defineEmits<{
-  change: [page: number, pageSize: number] // 具名元组语法
+  change: [page: number, pageSize: number] // Названная грамматика группы Yuan Group
 }>()
 
 const page = ref(1)
