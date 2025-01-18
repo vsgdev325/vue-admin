@@ -354,7 +354,7 @@ const barOptions = ref<ECOption>({
         // Area filling style
         // Linear gradient, the first four parameters are x0, y0, x2, y2 (range 0 ~ 1);
         // equivalent to the percentage in the graphic enclosure box.If the last parameter is 'true',
-        // the four values ​​are absolute pixels.
+        // the four values are Absolute pixels.
         color: new graphic.LinearGradient(
           0,
           0,

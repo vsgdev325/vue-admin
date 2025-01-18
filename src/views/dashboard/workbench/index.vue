@@ -159,7 +159,7 @@ const { userInfo } = useAuthStore()
                 />
               </template>
               <n-thing
-                title="What are you doing ~ haha ​​~ Oh ~"
+                title="What are you doing ~ haha ~ Oh ~"
                 title-extra="09/29/2022"
                 description="Cai Xukun, from the famous idol trainee, two and a half years and a half years and a half-year-old band combing, was a scene of a variety show idol trainee in 2018"
               />
