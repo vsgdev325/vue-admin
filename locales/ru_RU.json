@@ -207,6 +207,9 @@
     "cards": {
       "1": {
         "titleDynamic": "динамический"
+      },
+      "2": {
+        "titleAnnouncement": "объявление"
       }
     },
     "statisticLabel1": "Активные пользователи",

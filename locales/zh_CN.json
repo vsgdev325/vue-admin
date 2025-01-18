@@ -207,6 +207,9 @@
     "cards": {
       "1": {
         "titleDynamic": "动态"
+      },
+      "2": {
+        "titleAnnouncement": "公告"
       }
     },
     "statisticLabel1": "活跃用户",

@@ -5,7 +5,7 @@ import { graphic } from 'echarts'
 // Cake
 const pieOptions = ref<ECOption>({
   title: {
-    text: '饼图',
+    text: 'Cake map',
   },
   color: [
     '#37a2da',
@@ -270,7 +270,7 @@ useEcharts('lineRef', lineOptions)
 // Pillar
 const barOptions = ref<ECOption>({
   title: {
-    text: '柱状图',
+    text: 'Pillar',
   },
   tooltip: {},
   grid: {
@@ -303,7 +303,7 @@ const barOptions = ref<ECOption>({
       axisTick: {
         show: false,
       },
-      data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月'],
+      data: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
     },
   ],
   yAxis: [
@@ -435,7 +435,7 @@ const radarOptions = ref<ECOption>({
       type: 'radar',
       data: [
         {
-          name: '进站',
+          name: 'Enter the station',
           value: [43, 90, 80, 53, 78, 89, 77, 50],
           areaStyle: {
             color: {
@@ -466,7 +466,7 @@ const radarOptions = ref<ECOption>({
           },
         },
         {
-          name: '出站',
+          name: 'Leave the station',
           value: [50, 44, 56, 69, 43, 77, 90, 20],
           areaStyle: {
             color: {

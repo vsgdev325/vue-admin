@@ -1,21 +1,21 @@
 {
-  "name": "nova-admin",
+  "name": "vue-admin",
   "type": "module",
   "version": "0.9.10",
   "private": true,
-  "description": "a clean and concise back-end management template based on Vue3, Vite5, Typescript, and Naive UI.",
+  "description": "forked from https://github.com/chansee97/nova-admin:main",
   "author": {
-    "name": "chansee97",
-    "email": "chen.dev@foxmail.com",
-    "url": "https://github.com/chansee97"
+    "name": "vsgdev325",
+    "email": "vsgdev325@gmail.com",
+    "url": "https://github.com/vsgdev325"
   },
   "license": "MIT",
-  "homepage": "https://github.com/chansee97/nova-admin",
+  "homepage": "https://github.com/vsgdev325/vue-admin",
   "repository": {
-    "url": "https://github.com/chansee97/nova-admin.git"
+    "url": "https://github.com/vsgdev325/vue-admin.git"
   },
   "bugs": {
-    "url": "https://github.com/chansee97/nova-admin/issues"
+    "url": "https://github.com/vsgdev325/vue-admin/issues"
   },
   "keywords": [
     "Vue",
