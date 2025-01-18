@@ -4,7 +4,7 @@ import {
 } from '@/service'
 
 const emit = defineEmits<{
-  update: [data: any] // 具名元组语法
+  update: [data: any] // Named Yuan Group grammar
 }>()
 
 async function expiredToken() {
@@ -15,7 +15,7 @@ async function expiredToken() {
 
 <template>
   <n-card title="Token Expiration" size="small">
-    注意观察第二次的请求，token已刷新
+    Pay attention to the second request, token has been refreshed
     <n-button type="error" @click="expiredToken">
       click
     </n-button>

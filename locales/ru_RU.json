@@ -204,6 +204,14 @@
     }
   },
   "workbench": {
-    "statisticLabel1": "Активные пользователи"
+    "cards": {
+      "1": {
+        "titleDynamic": "динамический"
+      }
+    },
+    "statisticLabel1": "Активные пользователи",
+    "statisticLabel2": "пользователь",
+    "statisticLabel3": "Просмотр просмотров",
+    "statisticLabel4": "Количество избранных"
   }
 }

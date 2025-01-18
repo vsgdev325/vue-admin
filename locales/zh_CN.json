@@ -204,6 +204,14 @@
     }
   },
   "workbench": {
-    "statisticLabel1": "活跃用户"
+    "cards": {
+      "1": {
+        "titleDynamic": "动态"
+      }
+    },
+    "statisticLabel1": "活跃用户",
+    "statisticLabel2": "用户",
+    "statisticLabel3": "浏览量",
+    "statisticLabel4": "收藏数"
   }
 }

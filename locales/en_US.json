@@ -204,6 +204,14 @@
     }
   },
   "workbench": {
-    "statisticLabel1": "Active users"
+    "cards": {
+      "1": {
+        "titleDynamic": "dynamic"
+      }
+    },
+    "statisticLabel1": "Active users",
+    "statisticLabel2": "user",
+    "statisticLabel3": "View of views",
+    "statisticLabel4": "Number of Favorites"
   }
 }

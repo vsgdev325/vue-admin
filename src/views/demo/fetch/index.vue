@@ -23,7 +23,7 @@ function handleUpdate(data: any) {
 </script>
 
 <template>
-  <n-card title="网络请求示例">
+  <n-card title="Example of network request">
     <n-split direction="horizontal" :max="0.75" :min="0.25">
       <template #1>
         <div class="grid grid-cols-3 gap-2 p-2">

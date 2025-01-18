@@ -4,7 +4,7 @@ import {
 } from '@/service'
 
 const emit = defineEmits<{
-  update: [data: any] // 具名元组语法
+  update: [data: any] // Named Yuan Group grammar
 }>()
 
 async function failedResponse() {
@@ -14,7 +14,7 @@ async function failedResponse() {
 </script>
 
 <template>
-  <n-card title="失败-业务操作错误（无提示）" size="small">
+  <n-card title="Failure-business operation errors (no prompts) " size="small">
     <n-button type="error" @click="failedResponse">
       click
     </n-button>

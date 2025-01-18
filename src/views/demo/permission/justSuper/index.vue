@@ -4,7 +4,7 @@
 
 <template>
   <div>
-    只有超级管理员可见
+    Only super administrators can be seen
   </div>
 </template>
 

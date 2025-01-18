@@ -6,11 +6,11 @@ import {
 import { useRequest } from 'alova/client'
 
 const emit = defineEmits<{
-  update: [data: any] // 具名元组语法
+  update: [data: any] // Named Yuan Group grammar
 }>()
 
 const { data: fetchGetData, send: sendFetchGet } = useRequest(fetchGet({ a: 112211 }), {
-  // 当immediate为false时，默认不发出
+  // when immediate for false At the time, the default is not issued
   immediate: false,
 })
 
@@ -21,7 +21,7 @@ async function handleRequestHook() {
 </script>
 
 <template>
-  <n-card title="useRequest风格" size="small">
+  <n-card title="useRequest style" size="small">
     <n-button @click="handleRequestHook">
       click
     </n-button>

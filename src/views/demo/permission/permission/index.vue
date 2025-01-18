@@ -14,33 +14,33 @@ function toggleUserRole(role: Entity.RoleType) {
 </script>
 
 <template>
-  <n-card title="权限示例">
-    <n-h1> 当前权限：{{ role }}</n-h1>
+  <n-card title="Permissions example">
+    <n-h1> Current authority：{{ role }}</n-h1>
     <n-button-group>
       <n-button v-for="item in roleList" :key="item" type="default" @click="toggleUserRole(item)">
         {{ item }}
       </n-button>
     </n-button-group>
-    <n-h2>v-permission 指令用法</n-h2>
+    <n-h2>v-permission Instruction</n-h2>
     <n-space>
       <n-button v-permission="'super'">
-        仅super可见
+        only super visible
       </n-button>
       <n-button v-permission="['admin']">
-        admin可见
+        admin visible
       </n-button>
     </n-space>
 
-    <n-h2>usePermission 函数用法</n-h2>
+    <n-h2>usePermission Function usage</n-h2>
     <n-space>
       <n-button v-if="hasPermission('super')">
-        super可见
+        super visible
       </n-button>
       <n-button v-if="hasPermission('admin')">
-        admin可见
+        admin visible
       </n-button>
       <n-button v-if="hasPermission(['admin', 'user'])">
-        admin和user可见
+        admin and user visible
       </n-button>
     </n-space>
   </n-card>

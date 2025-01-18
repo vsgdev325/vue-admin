@@ -41,11 +41,11 @@ async function getDictContent(code: string) {
 
 const dictColumns: DataTableColumns<Entity.Dict> = [
   {
-    title: '字典项',
+    title: 'Dictionary',
     key: 'label',
   },
   {
-    title: '字典码',
+    title: 'Dictionary',
     key: 'code',
     render: (row) => {
       return (
@@ -54,7 +54,7 @@ const dictColumns: DataTableColumns<Entity.Dict> = [
     },
   },
   {
-    title: '操作',
+    title: 'operate',
     key: 'actions',
     align: 'center',
     render: (row) => {
@@ -64,25 +64,25 @@ const dictColumns: DataTableColumns<Entity.Dict> = [
             size="small"
             onClick={() => getDictContent(row.code)}
           >
-            查看字典
+            View the dictionary
           </NButton>
           <NButton
             size="small"
             onClick={() => dictRef.value!.openModal('edit', row)}
           >
-            编辑
+            edit
           </NButton>
           <NPopconfirm onPositiveClick={() => deleteDict(row.id!)}>
             {{
               default: () => (
                 <span>
-                  确认删除字典
+                  Confirm the deletion dictionary
                   <b>{row.label}</b>
                   {' '}
                   ？
                 </span>
               ),
-              trigger: () => <NButton size="small" type="error">删除</NButton>,
+              trigger: () => <NButton size="small" type="error">delete</NButton>,
             }}
           </NPopconfirm>
         </NFlex>
@@ -93,19 +93,19 @@ const dictColumns: DataTableColumns<Entity.Dict> = [
 
 const contentColumns: DataTableColumns<Entity.Dict> = [
   {
-    title: '字典名称',
+    title: 'Dictionary name',
     key: 'label',
   },
   {
-    title: '字典码',
+    title: 'Dictionary',
     key: 'code',
   },
   {
-    title: '字典值',
+    title: 'Dictionary',
     key: 'value',
   },
   {
-    title: '操作',
+    title: 'operate',
     key: 'actions',
     align: 'center',
     width: '15em',
@@ -116,19 +116,19 @@ const contentColumns: DataTableColumns<Entity.Dict> = [
             size="small"
             onClick={() => dictContentRef.value!.openModal('edit', row)}
           >
-            编辑
+            edit
           </NButton>
           <NPopconfirm onPositiveClick={() => deleteDict(row.id!)}>
             {{
               default: () => (
                 <span>
-                  确认删除字典值
+                  Confirm the deletion of the dictionary value
                   <b>{row.label}</b>
                   {' '}
                   ？
                 </span>
               ),
-              trigger: () => <NButton size="small" type="error">删除</NButton>,
+              trigger: () => <NButton size="small" type="error">delete</NButton>,
             }}
           </NPopconfirm>
         </NFlex>
@@ -138,7 +138,7 @@ const contentColumns: DataTableColumns<Entity.Dict> = [
 ]
 
 function deleteDict(id: number) {
-  window.$message.error(`删除字典${id}`)
+  window.$message.error(`Delete dictionary ${id}`)
 }
 </script>
 
@@ -151,7 +151,7 @@ function deleteDict(id: number) {
             <template #icon>
               <icon-park-outline-add-one />
             </template>
-            新建
+            Newly built
           </NButton>
         </template>
         <template #header-extra>
@@ -160,7 +160,7 @@ function deleteDict(id: number) {
               <template #icon>
                 <icon-park-outline-refresh />
               </template>
-              刷新
+              refresh
             </NButton>
           </NFlex>
         </template>
@@ -177,7 +177,7 @@ function deleteDict(id: number) {
             <template #icon>
               <icon-park-outline-add-one />
             </template>
-            新建
+            Newly built
           </NButton>
         </template>
         <template #header-extra>
@@ -186,7 +186,7 @@ function deleteDict(id: number) {
               <template #icon>
                 <icon-park-outline-refresh />
               </template>
-              刷新
+              refresh
             </NButton>
           </NFlex>
         </template>
@@ -197,8 +197,8 @@ function deleteDict(id: number) {
       </n-card>
     </div>
 
-    <DictModal ref="dictRef" modal-name="字典项" is-root />
-    <DictModal ref="dictContentRef" modal-name="字典值" :dict-code="lastDictCode" />
+    <DictModal ref="dictRef" modal-name="Dictionary" is-root />
+    <DictModal ref="dictContentRef" modal-name="Dictionary" :dict-code="lastDictCode" />
   </NFlex>
 </template>
 

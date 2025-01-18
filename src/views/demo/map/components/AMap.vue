@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { load } = useScriptTag('https://webapi.amap.com/maps?v=2.0&key=85e62187c6f8e51c797c87b1f36f787a')
-/* https://lbs.amap.com/api/jsapi-v2/summary 高德地图开发文档 */
+/* https://lbs.amap.com/api/jsapi-v2/summary Gaode Map Development Document */
 
 onMounted(() => {
   initMap()

@@ -28,7 +28,7 @@ function downloadLink(data: Blob, name: string) {
 </script>
 
 <template>
-  <n-card title="下载文件" size="small">
+  <n-card title="Download file" size="small">
     <n-button @click="getBlobFile">
       click
     </n-button>

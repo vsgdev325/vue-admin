@@ -4,7 +4,7 @@ import {
 } from '@/service'
 
 const emit = defineEmits<{
-  update: [data: any] // 具名元组语法
+  update: [data: any] // Named Yuan Group grammar
 }>()
 
 async function put() {

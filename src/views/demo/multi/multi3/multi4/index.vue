@@ -9,7 +9,7 @@ function testMsg() {
     text-center
     c-red
   >
-    三级菜单页
+    Three-level menu page
     <n-button
       strong
       secondary

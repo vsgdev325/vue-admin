@@ -2,7 +2,7 @@
 import { type ECOption, useEcharts } from '@/hooks'
 import { graphic } from 'echarts'
 
-// 饼状图
+// Cake
 const pieOptions = ref<ECOption>({
   title: {
     text: '饼图',
@@ -38,7 +38,7 @@ const pieOptions = ref<ECOption>({
   series: [
     {
       type: 'pie',
-      name: '增值电信业务统计表',
+      name: 'Value-added telecommunications business statistics table',
       radius: [40, 150],
       roseType: 'area',
       data: [
@@ -76,10 +76,10 @@ function updatePieChart() {
   update(pieOptions.value)
 }
 
-// 折线图
+// Folding diagram
 const lineOptions = ref<ECOption>({
   title: {
-    text: '折线图',
+    text: 'Folding diagram',
   },
   tooltip: {
     trigger: 'axis',
@@ -267,7 +267,7 @@ const lineOptions = ref<ECOption>({
 })
 useEcharts('lineRef', lineOptions)
 
-// 柱状图
+// Pillar
 const barOptions = ref<ECOption>({
   title: {
     text: '柱状图',
@@ -282,21 +282,21 @@ const barOptions = ref<ECOption>({
   },
   legend: {
     itemGap: 50,
-    data: ['注册总量', '最新注册量'],
+    data: ['Total registration', 'Latest registration volume'],
   },
   xAxis: [
     {
       type: 'category',
       boundaryGap: true,
       axisLine: {
-        // 坐标轴轴线相关设置。数学上的x轴
+        // Concope axis related settings.Mathematical X axis
         show: true,
         lineStyle: {
           color: '#f9f9f9',
         },
       },
       axisLabel: {
-        // 坐标轴刻度标签的相关设置
+        // Related settings of coordinate shaft scale label
         color: '#d1e6eb',
         margin: 15,
       },
@@ -332,13 +332,13 @@ const barOptions = ref<ECOption>({
   ],
   series: [
     {
-      name: '注册总量',
+      name: 'Total registration',
       type: 'line',
       showAllSymbol: true,
       symbol: 'emptyCircle',
       symbolSize: 6,
       itemStyle: {
-        color: '#28ffb3', // 线条颜色
+        color: '#28ffb3', // Line color
         borderColor: '#f0f',
       },
       label: {
@@ -351,8 +351,10 @@ const barOptions = ref<ECOption>({
         show: false,
       },
       areaStyle: {
-        // 区域填充样式
-        // 线性渐变，前4个参数分别是x0,y0,x2,y2(范围0~1);相当于图形包围盒中的百分比。如果最后一个参数是‘true’，则该四个值是绝对像素位置。
+        // Area filling style
+        // Linear gradient, the first four parameters are x0, y0, x2, y2 (range 0 ~ 1);
+        // equivalent to the percentage in the graphic enclosure box.If the last parameter is 'true',
+        // the four values ​​are absolute pixels.
         color: new graphic.LinearGradient(
           0,
           0,
@@ -370,13 +372,13 @@ const barOptions = ref<ECOption>({
           ],
           false,
         ),
-        shadowColor: 'rgba(53,142,215, 0.9)', // 阴影颜色
-        shadowBlur: 20, // shadowBlur设图形阴影的模糊大小。配合shadowColor,shadowOffsetX/Y, 设置图形的阴影效果。
+        shadowColor: 'rgba(53,142,215, 0.9)', // Shadow color
+        shadowBlur: 20, // Shadowblur sets the blur size of graphics shadows.With shadowcolor, shadowoffsetx/y, set the shadow effect of the graphic.
       },
       data: [393, 438, 485, 631, 689, 824, 987],
     },
     {
-      name: '最新注册量',
+      name: 'Latest registration volume',
       type: 'bar',
       barWidth: 20,
       tooltip: {
@@ -407,7 +409,7 @@ const barOptions = ref<ECOption>({
 })
 useEcharts('barRef', barOptions)
 
-// 雷达图
+// Radar map
 const radarOptions = ref<ECOption>({
   title: {
     text: 'Multiple Radar',
@@ -419,12 +421,12 @@ const radarOptions = ref<ECOption>({
   radar: [
     {
       indicator: [
-        { name: '萧塘', max: 100 },
-        { name: '环城东路', max: 100 },
-        { name: '望园路', max: 100 },
-        { name: '奉贤新城', max: 100 },
-        { name: '奉浦大道', max: 100 },
-        { name: '金海湖', max: 100 },
+        { name: 'Small pond', max: 100 },
+        { name: 'Huancheng East Road', max: 100 },
+        { name: 'Wangyuan Road', max: 100 },
+        { name: 'Fengxian New Town', max: 100 },
+        { name: 'Fengpu Avenue', max: 100 },
+        { name: 'Jinhai Lake', max: 100 },
       ],
     },
   ],
@@ -443,23 +445,23 @@ const radarOptions = ref<ECOption>({
               r: 0.5,
               colorStops: [
                 {
-                  offset: 0,
-                  color: 'rgba(46,203,255, 0.14)', // 0% 处的颜色
+                  offset: 0, // 0% Color
+                  color: 'rgba(46,203,255, 0.14)', // 0% Color
                 },
                 {
                   offset: 0.15,
-                  color: 'rgba(46,203,255, 0.14)', // 100% 处的颜色
+                  color: 'rgba(46,203,255, 0.14)', // 100% Color
                 },
                 {
                   offset: 0.75,
-                  color: '#057FB3', // 100% 处的颜色
+                  color: '#057FB3', // 100% Color
                 },
                 {
                   offset: 1,
-                  color: '#078DC6', // 100% 处的颜色
+                  color: '#078DC6', // 100% Color
                 },
               ],
-              global: false, // 缺省为 false
+              global: false, // Default false
             },
           },
         },
@@ -475,22 +477,22 @@ const radarOptions = ref<ECOption>({
               colorStops: [
                 {
                   offset: 0,
-                  color: 'rgba(255, 127,0, 0.14)', // 0% 处的颜色
+                  color: 'rgba(255, 127,0, 0.14)', // 0% Color
                 },
                 {
                   offset: 0.15,
-                  color: 'rgba(255, 127,0, 0.14)', // 100% 处的颜色
+                  color: 'rgba(255, 127,0, 0.14)', // 100% color
                 },
                 {
                   offset: 0.75,
-                  color: 'rgba(2255, 127,0, 0.4)', // 100% 处的颜色
+                  color: 'rgba(2255, 127,0, 0.4)', // 100% color
                 },
                 {
                   offset: 1,
-                  color: 'rgba(255, 127,0, 0.5)', // 100% 处的颜色
+                  color: 'rgba(255, 127,0, 0.5)', // 100% color
                 },
               ],
-              global: false, // 缺省为 false
+              global: false, // Default false
             },
           },
         },
@@ -508,7 +510,7 @@ useEcharts('radarRef', radarOptions)
   >
     <n-card>
       <n-button @click="updatePieChart">
-        手动更新图表
+        Manual update chart
       </n-button>
       <div
         ref="pieRef"

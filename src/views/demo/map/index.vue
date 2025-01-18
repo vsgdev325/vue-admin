@@ -12,19 +12,19 @@ defineOptions({
 const maps = [
   {
     id: 'BMap',
-    label: '百度地图',
+    label: 'Baidu Map',
     component: BMap,
   },
   {
     id: 'AMap',
-    label: '高德地图',
+    label: 'Gaode Map',
     component: AMap,
   },
 ]
 </script>
 
 <template>
-  <n-card title="地图示例(keepalive缓存)">
+  <n-card title="Map example (keepalive cache)">
     <n-tabs
       type="line"
       animated

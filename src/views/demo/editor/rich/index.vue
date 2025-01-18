@@ -1,9 +1,9 @@
 <script setup lang="ts">
 const text = ref('')
-// 模拟 ajax 异步获取内容
+// Simulation ajax asynchronous acquisition content
 onMounted(() => {
   setTimeout(() => {
-    text.value = '<p>模拟 Ajax 异步设置内容</p>'
+    text.value = '<p>Simulation AJAX asynchronous settings content</p>'
   }, 1500)
 })
 
@@ -11,15 +11,15 @@ const active = ref(false)
 </script>
 
 <template>
-  <n-card title="富文本编辑器">
+  <n-card title="Rich text editor">
     <n-space vertical :size="12">
-      <n-alert title="基于 Quill 封装" type="success" />
+      <n-alert title="Based on QUILL packaging" type="success" />
       <n-switch v-model:value="active">
         <template #checked>
-          禁用
+          Disable
         </template>
         <template #unchecked>
-          启用
+          Open up
         </template>
       </n-switch>
       <n-space :size="12">
@@ -27,7 +27,7 @@ const active = ref(false)
           <RichTextEditor v-model="text" :disabled="active" />
         </div>
         <div>
-          <n-h2>v-html 预览</n-h2>
+          <n-h2>v-html Preview</n-h2>
           <div v-html="text" />
         </div>
       </n-space>

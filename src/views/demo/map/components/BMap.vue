@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { load } = useScriptTag('https://api.map.baidu.com/getscript?v=3.0&ak=MwqQwPxa5ipusyNmH1WT62y5DKhYxIgb&services=&t=20220816154130')
-/* https://lbsyun.baidu.com/index.php?title=jspopular3.0 百度地图开发者文档 */
+/* https://lbsyun.baidu.com/index.php?title=jspopular3.0 Baidu map developer documentation */
 
 onMounted(() => {
   initMap()

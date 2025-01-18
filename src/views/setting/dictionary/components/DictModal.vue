@@ -33,9 +33,9 @@ type ModalType = 'add' | 'view' | 'edit'
 const modalType = shallowRef<ModalType>('add')
 const modalTitle = computed(() => {
   const titleMap: Record<ModalType, string> = {
-    add: '添加',
-    view: '查看',
-    edit: '编辑',
+    add: 'Add to',
+    view: 'Check',
+    edit: 'edit',
   }
   return `${titleMap[modalType.value]}${modalName}`
 })
@@ -83,7 +83,7 @@ async function submitModal() {
     async add() {
       return new Promise((resolve) => {
         setTimeout(() => {
-          window.$message.success('模拟新增成功')
+          window.$message.success('Simulation new success')
           resolve(true)
         }, 2000)
       })
@@ -91,7 +91,7 @@ async function submitModal() {
     async edit() {
       return new Promise((resolve) => {
         setTimeout(() => {
-          window.$message.success('模拟编辑成功')
+          window.$message.success('Simulation edit')
           resolve(true)
         }, 2000)
       })
@@ -108,17 +108,17 @@ async function submitModal() {
 const rules: FormRules = {
   label: {
     required: true,
-    message: '请输入字典名称',
+    message: 'Please enter the dictionary name',
     trigger: ['input', 'blur'],
   },
   code: {
     required: true,
-    message: '请输入字典码',
+    message: 'Please enter the dictionary code',
     trigger: ['input', 'blur'],
   },
   value: {
     required: true,
-    message: '请输入字典值',
+    message: 'Please enter the dictionary value',
     type: 'number',
     trigger: ['input', 'blur'],
   },
@@ -138,23 +138,23 @@ const rules: FormRules = {
     }"
   >
     <n-form ref="formRef" :rules="rules" label-placement="left" :model="formModel" :label-width="100" :disabled="modalType === 'view'">
-      <n-form-item label="字典名称" path="label">
+      <n-form-item label="Dictionary name" path="label">
         <n-input v-model:value="formModel.label" />
       </n-form-item>
-      <n-form-item label="字典码" path="code">
+      <n-form-item label="Dictionary" path="code">
         <n-input v-model:value="formModel.code" :disabled="!isRoot" />
       </n-form-item>
-      <n-form-item v-if="!isRoot" label="字典值" path="value">
+      <n-form-item v-if="!isRoot" label="Dictionary" path="value">
         <n-input-number v-model:value="formModel.value" :min="0" />
       </n-form-item>
     </n-form>
     <template #action>
       <n-space justify="center">
         <n-button @click="closeModal">
-          取消
+          Cancel
         </n-button>
         <n-button type="primary" :loading="submitLoading" @click="submitModal">
-          提交
+          Submit
         </n-button>
       </n-space>
     </template>

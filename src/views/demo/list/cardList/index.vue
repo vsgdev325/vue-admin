@@ -3,50 +3,50 @@ const currentRadio = ref(0)
 
 const cardData = [
   {
-    title: '一类',
+    title: 'Category',
     id: 1,
     children: [
       {
         id: 0,
-        title: '卡片',
-        content: '卡片内容',
+        title: 'card',
+        content: 'Card content',
       },
       {
         id: 1,
-        title: '卡片2',
-        content: '卡片2内容',
+        title: 'Card 2',
+        content: 'Card 2 content',
       },
     ],
   },
   {
-    title: '二类',
+    title: 'Second category',
     id: 2,
     children: [
       {
         id: 0,
-        title: '卡片',
-        content: '卡片内容',
+        title: 'card',
+        content: 'Card content',
       },
       {
         id: 1,
-        title: '卡片2',
-        content: '卡片2内容',
+        title: 'Card 2',
+        content: 'Card 2 content',
       },
     ],
   },
   {
-    title: '三类',
+    title: 'Three categories',
     id: 3,
     children: [
       {
         id: 0,
-        title: '卡片',
-        content: '卡片内容',
+        title: 'card',
+        content: 'Card content',
       },
       {
         id: 1,
-        title: '卡片2',
-        content: '卡片2内容',
+        title: 'Card 2',
+        content: 'Card 2 content',
       },
     ],
   },
@@ -54,7 +54,7 @@ const cardData = [
 const radioDate = [
   {
     value: 0,
-    label: '全部',
+    label: 'all',
   },
   ...cardData.map((item) => {
     return { value: item.id, label: item.title }
@@ -110,12 +110,12 @@ const radioDate = [
               <template #action>
                 <n-space justify="space-between">
                   <span />
-                  <n-button>开通</n-button>
+                  <n-button>Open</n-button>
                 </n-space>
               </template>
               <template #header-extra>
                 <n-tag type="info">
-                  生效中
+                  Take effect
                 </n-tag>
               </template>
             </n-thing>

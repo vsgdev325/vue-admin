@@ -1,31 +1,31 @@
 <template>
   <n-space vertical>
-    <n-card title="图标选择器">
+    <n-card title="Icon selector">
       <icon-select />
     </n-card>
-    <n-card title="自动导入图标">
+    <n-card title="Automatic import icon">
       <div>
-        正常：<icon-park-outline-apple />
+        normal：<icon-park-outline-apple />
       </div>
       <div>
-        大：<icon-park-outline-apple class="text-2em" />
+        big：<icon-park-outline-apple class="text-2em" />
       </div>
       <div>
-        大大大：<icon-park-outline-apple class="text-4em" />
+        Big size：<icon-park-outline-apple class="text-4em" />
       </div>
     </n-card>
-    <n-card title="自动导入svg图标">
+    <n-card title="Automatically import SVG icon">
       <div>
-        正常：<svg-icons-cool />
+        normal：<svg-icons-cool />
       </div>
       <div>
-        大：<svg-icons-cool class="text-2em" />
+        big：<svg-icons-cool class="text-2em" />
       </div>
       <div>
-        大大大：<svg-icons-cool class="text-4em" />
+        Big size：<svg-icons-cool class="text-4em" />
       </div>
       <div>
-        nova-icon组件加载：<nova-icon icon="local:cool" />
+        nova-icon Component load：<nova-icon icon="local:cool" />
       </div>
     </n-card>
   </n-space>

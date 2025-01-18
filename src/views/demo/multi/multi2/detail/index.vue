@@ -6,18 +6,18 @@ const { modifyTab } = useTabStore()
 const { fullPath, query } = useRoute()
 
 modifyTab(fullPath, (target) => {
-  target.meta.title = `详情页${query.id}`
+  target.meta.title = `Detail page ${query.id}`
 })
 </script>
 
 <template>
   <n-space vertical>
-    <n-alert title="目前可公开的情报" type="warning">
-      这是详情子页，他不会出现在侧边栏,他其实是上个页面的同级，并不是下级，这个要注意
+    <n-alert title="Current information that can be made public" type="warning">
+      This is the details page. He will not appear on the side bar. He is actually the same level of the previous page, not a lower level. Pay attention to this
     </n-alert>
 
     <n-h2>
-      详情页id:{{ query.id }}
+      Detail page id:{{ query.id }}
     </n-h2>
   </n-space>
 </template>

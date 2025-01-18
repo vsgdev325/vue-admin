@@ -4,10 +4,10 @@ import lib from '@/../package.json'
 
 <template>
   <n-space vertical>
-    <n-card title="关于">
-      Nova-admin是一款基于Vue3+vite+TypeScript+NaiveUI的后台管理模板，力求使用简约的代码实现完备功能，降低学习门槛和维护成本，让大家能早点下班做自己的事情
+    <n-card title="about">
+      Nova-admin It is a background management template based on Vue3+VITE+TYPEScript+Naiveui. It strives to use simple code to achieve complete functions, reduce learning threshold and maintenance costs, so that everyone can do their own things early
     </n-card>
-    <n-card title="信息">
+    <n-card title="information">
       <n-descriptions
         label-placement="left"
         bordered
@@ -35,7 +35,7 @@ import lib from '@/../package.json'
             Gitee
           </n-button>
         </n-descriptions-item>
-        <n-descriptions-item label="预览地址">
+        <n-descriptions-item label="Preview address">
           <n-button
             text
             tag="a"
@@ -43,17 +43,17 @@ import lib from '@/../package.json'
             target="_blank"
             type="primary"
           >
-            预览地址
+            Preview address
           </n-button>
         </n-descriptions-item>
-        <n-descriptions-item label="版本">
+        <n-descriptions-item label="Version">
           <n-tag :bordered="false">
             {{ lib.version }}
           </n-tag>
         </n-descriptions-item>
       </n-descriptions>
     </n-card>
-    <n-card title="生产环境依赖">
+    <n-card title="Production environment dependence">
       <n-descriptions
         label-placement="left"
         bordered
@@ -68,7 +68,7 @@ import lib from '@/../package.json'
         </n-descriptions-item>
       </n-descriptions>
     </n-card>
-    <n-card title="开发环境依赖">
+    <n-card title="Development environment dependence">
       <n-descriptions
         label-placement="left"
         bordered

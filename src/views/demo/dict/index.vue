@@ -68,25 +68,25 @@ const enumLabel = computed(() => {
 </script>
 
 <template>
-  <n-card title="字典示例">
+  <n-card title="Dictionary example">
     <n-flex vertical>
       <n-flex>
         <n-select v-model:value="dictKey" class="w-1/3" :options="options" @update:value="changeSelect" />
-        子字典下拉框
+        Sub-dictionary drop box
         <n-select class="w-1/3" :options="subOptions" />
       </n-flex>
       <n-flex>
         <n-button @click="getDict">
-          获取当前字典数据
+          Get the current dictionary data
         </n-button>
         <n-button @click="getEnum">
-          获取当前字典枚举
+          Get the current dictionary enumeration
         </n-button>
         <n-button @click="getValueMap">
-          获取当前字典ValueMap
+          Get the current dictionary ValueMap
         </n-button>
         <n-button @click="getLabelMap">
-          获取当前字典LabelMap
+          Get the current dictionary LabelMap
         </n-button>
       </n-flex>
 
@@ -97,13 +97,13 @@ const enumLabel = computed(() => {
       <n-flex align="center">
         <n-input-number v-model:value="dictValue" :min="0" />
         <n-text type="info">
-          Map回显结果 {{ dictLabel }}
+          Map Reverse result {{ dictLabel }}
         </n-text>
       </n-flex>
       <n-flex align="center">
         <n-input-number v-model:value="enumValue" :min="0" />
         <n-text type="info">
-          Enum回显结果 {{ enumLabel }}
+          Enum Reverse result {{ enumLabel }}
         </n-text>
       </n-flex>
     </n-flex>
